@@ -2,8 +2,10 @@ package com.example.meetinglite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void ButtonClicked(View view) {
+    public void ButtonClicked(View v) {
+    if(v==findViewById(R.id.imageButtonSetMeeting)){
+        Intent set_meeting = new Intent(getApplicationContext(),SetMeeting.class);
+        startActivity(set_meeting);
+    }
 
     }
 }
