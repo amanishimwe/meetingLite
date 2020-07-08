@@ -8,6 +8,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,7 @@ public class SetMeeting extends AppCompatActivity {
 
     }
     public void buttonClick(View v){
-        if(v==findViewById(R.id.imageButtonPickDate)) {
+        if(v==findViewById(R.id.imgButtonPickDate)) {
             year = mycalendar.get(Calendar.YEAR);
             month = mycalendar.get(Calendar.MONTH);
             day = mycalendar.get(Calendar.DATE);
@@ -54,21 +55,24 @@ public class SetMeeting extends AppCompatActivity {
         }
 
         if(v==findViewById(R.id.imageButtonPickTime)){
+
+
             myhour = mycalendar.get(Calendar.HOUR_OF_DAY);
             myminutes = mycalendar.get(Calendar.MINUTE);
 
-            TimePickerDialog.OnTimeSetListener mytimelistener = new
-                    TimePickerDialog.OnTimeSetListener() {
-                        @Override
-                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                            myhour = hourOfDay;
-                            myminutes = minute;
+         TimePickerDialog.OnTimeSetListener mytimelistener = new
+                 TimePickerDialog.OnTimeSetListener() {
+                     @Override
+                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+                         myhour = hourOfDay;
+                         myminutes = minute;
+                         String timepicked = "Meeting Time: " + myhour + ":"+ myminutes;
+                         timeselected.setText(timepicked);
 
-                            String timepicked = "Meeting Time:" + myminutes + ":" + myhour;
-                            timeselected.setText(timepicked);
+                     }
+                 };
+         new TimePickerDialog(this, mytimelistener,myhour,myminutes,true).show();
 
-                        }
-                    };
 
 
 

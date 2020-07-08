@@ -90,30 +90,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.523" />
 
+
     <ImageButton
-        android:id="@+id/imageButtonPickDate"
-        android:layout_width="91dp"
-        android:layout_height="87dp"
+        android:id="@+id/imgButtonPickDate"
+        android:layout_width="102dp"
+        android:layout_height="101dp"
+        android:background="@drawable/calender_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717"
-        app:srcCompat="@drawable/calender_icon"
+        app:layout_constraintVertical_bias="0.738"
         android:onClick="buttonClick"/>
 
     <ImageButton
         android:id="@+id/imageButtonPickTime"
-        android:layout_width="103dp"
-        android:layout_height="83dp"
+        android:layout_width="102dp"
+        android:layout_height="101dp"
+        android:background="@drawable/calender_view"
+        android:onClick="buttonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintHorizontal_bias="0.699"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719"
-        app:srcCompat="@drawable/calender_icon" />
+        app:layout_constraintVertical_bias="0.738" />
 
     <Button
         android:id="@+id/button"
@@ -132,29 +134,31 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="94dp"
-        android:layout_height="41dp"
+        android:layout_width="116dp"
+        android:layout_height="33dp"
         android:text="Pick Date"
         android:textColor="#000"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.807" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="106dp"
-        android:layout_height="28dp"
+        android:layout_width="124dp"
+        android:layout_height="32dp"
         android:text="Pick Time"
+        android:gravity="center"
         android:textColor="#000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintHorizontal_bias="0.752"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.809" />
 </androidx.constraintlayout.widget.ConstraintLayout>
