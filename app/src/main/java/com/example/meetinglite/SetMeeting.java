@@ -20,15 +20,18 @@ public class SetMeeting extends AppCompatActivity {
     private int year = 0, month = 0, day = 0, myhour = 0, myminutes = 0;
 
     TextView dateselected,timeselected;
+    EditText editMeetingname, editMeetingdescription;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setmeeting);
-        EditText editmeetingname = findViewById(R.id.editTextMeetingName);
-        EditText editmeetingdescription = findViewById(R.id.editTextMeetingDescription);
+         editMeetingname = findViewById(R.id.editTextMeetingName);
+         editMeetingdescription = findViewById(R.id.editTextMeetingDescription);
 
         dateselected = findViewById(R.id.textViewMeetingDate);
         timeselected = findViewById(R.id.textViewMeetingTime);
+
+
 
 
     }
@@ -76,6 +79,13 @@ public class SetMeeting extends AppCompatActivity {
 
 
 
+        }
+
+        if(v==findViewById(R.id.buttonAddMeeting)){
+            //data from  the edit text
+            String str_meetingname = editMeetingname.getText().toString();
+            String str_meetingdecription = editMeetingdescription.getText().toString();
+            //date from the time and date pickers
         }
 
 

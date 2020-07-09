@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.738" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAddMeeting"
         android:layout_width="403dp"
         android:layout_height="50dp"
         android:text="Add Meeting"
